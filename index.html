@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>🏫 Index des TP</title>
+        <title>TP3</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -12,46 +12,95 @@
 
         <style>
           body{
-              background-color: #e9ebee;              
+              background-color: #e9ebee;
               font-family: system, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
               font-size: 16px;
               margin: 0 auto;
-              max-width: 800px;              
+              max-width: 800px;
           }
         </style>
-        
+
         <!-- Code à dé-commenter si besoin de fichier CSS ou JS -->
         <!--<link rel="stylesheet" href="style.css">-->
         <!--<script src="main.js"></script>-->
-    </head>
-    <body>        
-        <h1>🏫 Page d'index des TP 🎒</h1>
-        <!-- Add your site or application content here -->
-        <p>Hello ☀️️</p>
-        <img src="galilee.png" alt="Logo Galilee"/>
-      
-      <ul>
-        <li>
-          <a href="tp1/index.html">/TP1</a>
-        </li>
-        <li>
-          <a href="tp2/index.html">/TP2</a>
-        </li>
-        <li>
-          <a href="tp3/index.html">/TP3</a>
-        </li>
-        <li>
-          <a href="tp4/index.html">/TP4</a>
-        </li>
-        <li>
-          <a href="tp5/index.html">/TP5</a>
-        </li>
-        <li>
-          <a href="tp6/index.html">/TP6</a>
-        </li>
-        <li>
-          <a href="tp7/index.html">/TP7</a>
-        </li>
-      </ul>
+
+        <!-- jquery pour pouvoir utiliser les composants JS de boostap (modal, tooltip...) -->
+<script src="js/jquery-3.2.1.slim.min.js"></script>
+<script src="js/jquery-3.4.1.min.js"></script>
+
+
+<!-- CSS boostrap -->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<script src="js/popper.min.js"></script>
+
+<!-- composants JS de boostrap (modal http://getbootstrap.com/docs/4.0/components/modal/ , collapse...) -->
+<script src="js/bootstrap.min.js"></script>
+<script src="js/form-jquery-validation.js"></script>
+
+</head>
+
+
+
+    <body>
+
+        <div class="container">
+
+  <form>
+  <h1> <center> LOCALISATION </center></h1>
+
+  <div class="form-group">
+      <label for="nom">Nom</label>
+      <input type="text" name="nom" id="nom" class="form-control">
+  </div>
+
+  <div class="form-group">
+      <label for="prenom">Prenom</label>
+      <input type="text" name="prenom" id="prenom" class="form-control">
+  </div>
+
+  <div class="form-group">
+      <label for="ap">Adresse postale</label>
+      <input type="text" name="ap" id="ap" placeholder="Votre adresse" class="form-control">
+  </div>
+
+
+  <div class="form-group">
+      <label for="cp">Code postale</label>
+      <input type="number" name="cp" id="cp" placeholder="93000" class="form-control">
+  </div>
+
+  <div class="form-group">
+  <label for="pays">Pays</label>
+  <input type="text" name="pays" id="pays" class="form-control">
+  </div>
+
+
+
+    <button type="button" role="button" id="valider"  class="btn btn-primary" data-toggle="modal" data-target="#myModal">Envoyer</button>
+</form>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" >
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title"id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Corps de la modal à modifier après validation du formulaire</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
     </body>
 </html>
